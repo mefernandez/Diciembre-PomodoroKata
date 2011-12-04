@@ -7,7 +7,10 @@ kata es adecuado para intentarlo con cierto nivel de confianza.
 El problema que propone permite trabajar el API del pomodoro haciando TDD muy cómodamente.
 El punto más interesante del problema es la *virtualización* del tiempo, es decir, que
 a pesar de arrancar un pomodoro en realidad no hay ningún proceso contabilizando el tiempo
-que transcurre.
+que transcurre. Llevando este tema un poco más lejos, los test hacen uso de un "sleep" de 1
+segundo para realizar las pruebas. Esto tiene un efecto muy negativo, y es que los test
+unitarios tardan mucho más de lo que las prácticas en TDD recomiendan, con lo cual este
+tiempo de test también debería virtualizarse. Me lo apunto como otro TODO más.
 
 Lo cierto es que me llevó más de un pomodoro realizarlo. La próxima vez lo intento hacer
 por debajo de los 25 minutos, aunque ya he perdido la oportunidad de vencer el problema

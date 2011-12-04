@@ -34,6 +34,7 @@ public class PomodoroTest {
 		Pomodoro pomodoro = new Pomodoro();
 		pomodoro.setDuracion(new Tiempo(00,00,05));
 		pomodoro.start();
+		// TODO Virtualizar el tiempo de sleep. Lo mejor es que Pomodoro tenga un "provider" de tiempo en vez de llamar a System.currentTimeMillis();
 		Thread.currentThread().sleep(1*1000);
 		Tiempo restante = pomodoro.getTiempoRestante();
 		assertEquals(4, restante.getSegundos());
