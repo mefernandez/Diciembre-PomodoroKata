@@ -4,19 +4,17 @@ public class Pomodoro {
 	
 	private Tiempo duracion = null;
 	private Tiempo restante = null;
-	private long marca = 0;
+	private long marca = -1;
+	ProveedorTiempo proveedorTiempo;
+	
 	
 	public Pomodoro() {
 		duracion = new Tiempo(00,25,00);
-		try {
-			restante = (Tiempo) duracion.clone();
-		} catch (CloneNotSupportedException e) {
-			e.printStackTrace();
-		}
+		this.reset();
 	}
 
 	public Tiempo start() {
-		this.marca = System.currentTimeMillis();
+		this.marca = proveedorTiempo.getInstanteActual();
 		return restante;
 	}
 
@@ -26,15 +24,15 @@ public class Pomodoro {
 	}
 
 	public Tiempo getTiempoRestante() {
-		long ahora = System.currentTimeMillis();
-		if (marca == 0)
+		long ahora = proveedorTiempo.getInstanteActual();
+		if (marca == -1)
 			return restante;
 		long diferencia = (ahora - marca);
 		restante.restar(diferencia);
 		return restante;
 	}
 
-	public Tiempo stop() {
+	 public Tiempo stop() {
 		return getTiempoRestante();
 	}
 
@@ -45,6 +43,10 @@ public class Pomodoro {
 			e.printStackTrace();
 		}
 		return this.restante;
+	}
+
+	public void setProveedorTiempo(ProveedorTiempo proveedorTiempo) {
+		this.proveedorTiempo = proveedorTiempo;
 	}
 
 }
