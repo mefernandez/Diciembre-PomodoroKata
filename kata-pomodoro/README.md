@@ -28,5 +28,10 @@ sencillas clases sin ninguna relaci—n con OSGi, hasta llegar a un sistema con in
 web y de escritorio. Ahora que tengo el Pomodoro listo, ser’a interesante portarlo a 
 OSGi y "enchufarle" una UI al estilo plug-in.
 
+Changelog
+---------
+
+- Refactorizaci—n de los test y extracci—n de la obtenci—n del instante de tiempo para poder
+  hacer un Mock del paso del tiempo.
 
 
