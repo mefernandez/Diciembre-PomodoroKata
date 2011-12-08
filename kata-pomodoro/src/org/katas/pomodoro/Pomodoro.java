@@ -5,7 +5,7 @@ public class Pomodoro {
 	private Tiempo duracion = null;
 	private Tiempo restante = null;
 	private long marca = -1;
-	ProveedorTiempo proveedorTiempo;
+	Reloj proveedorTiempo;
 	
 	
 	public Pomodoro() {
@@ -45,7 +45,7 @@ public class Pomodoro {
 		return this.restante;
 	}
 
-	public void setProveedorTiempo(ProveedorTiempo proveedorTiempo) {
+	public void setProveedorTiempo(Reloj proveedorTiempo) {
 		this.proveedorTiempo = proveedorTiempo;
 	}
 

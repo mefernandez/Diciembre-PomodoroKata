@@ -8,13 +8,13 @@ import org.junit.Test;
 public class PomodoroTest {
 	
 	private Pomodoro pomodoro;
-	private ProveedorTiempoMock proveedorTiempo;
+	private RelojMock proveedorTiempo;
 	
 	@Before
 	public void setUp() {
 		pomodoro = new Pomodoro();
 		//proveedorTiempo = new ProveedorTiempoSistema();
-		proveedorTiempo = new ProveedorTiempoMock();
+		proveedorTiempo = new RelojMock();
 		pomodoro.setProveedorTiempo(proveedorTiempo);
 	}
 

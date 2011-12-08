@@ -1,6 +1,6 @@
 package org.katas.pomodoro;
 
-public class ProveedorTiempoMock implements ProveedorTiempo {
+public class RelojMock implements Reloj {
 	
 	private long ahora; 
 

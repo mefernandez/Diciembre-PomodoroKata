@@ -1,6 +1,6 @@
 package org.katas.pomodoro;
 
-public class ProveedorTiempoSistema implements ProveedorTiempo {
+public class RelojSistema implements Reloj {
 
 	public long getInstanteActual() {
 		return System.currentTimeMillis();

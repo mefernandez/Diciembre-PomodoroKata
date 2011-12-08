@@ -1,6 +1,6 @@
 package org.katas.pomodoro;
 
-public interface ProveedorTiempo {
+public interface Reloj {
 
 	public long getInstanteActual();
 
