@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: kata-pomodoro
-Bundle-SymbolicName: org.katas.pomodoro.core
-Bundle-Version: 1.0.0.qualifier
-Export-Package: org.katas.pomodoro
-Service-Component: OSGI-INF/component.xml
